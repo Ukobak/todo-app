@@ -1,0 +1,100 @@
+.todo-app {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.todo-app__wrapper {
+  width: 30vw;
+}
+
+.todo-app__list {
+  margin: 1rem 0;
+  padding: 0.2rem 0;
+  background-color: #6a6a6a;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0.5rem;
+}
+
+.todo-item__content {
+  display: flex;
+  gap:0.5rem;
+}
+
+.todo-item__checkbox {
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+}
+
+.todo-item__delete-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.todo-item__delete-button-icon {
+  height: 2rem;
+  fill: red;
+}
+
+.todo-item__delete-button-icon:hover {
+  fill: #8b0000;
+}
+
+.todo-item__important-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.todo-item__important-button-icon {
+  fill: gray; /* Цвет по умолчанию */
+}
+
+.todo-item__important-button--active .todo-item__important-button-icon {
+  fill: yellow; /* Цвет для важной задачи */
+}
+
+.add-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.add-item__input {
+  font-size: 14px;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  border: 2px solid #dee1e2;
+  color: rgb(14, 14, 16);
+  background: #dee1e2;
+  display: block;
+  height: 26px;
+  width: 100%;
+}
+
+.add-item__button {
+  border-radius: 6px;
+  background-color: transparent;
+  color:white;
+}
+
+.add-item__button:hover {
+  background-color: #6a6a6a;
+}
+
