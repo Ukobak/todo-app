@@ -1,37 +1,37 @@
-import React, {useState} from 'react';
-import {useDispatch} from "react-redux";
-import {addTodo} from "../store/slices/todoSlice";
+import React, { useState } from 'react';
+import { useDispatch } from "react-redux";
+import { addTodo } from "../store/slices/todoSlice";
+import { Input, Button } from 'antd';
 
 const AddItem: React.FC = () => {
-   const [text, setText] = useState('')
-    const dispatch = useDispatch()
+    const [text, setText] = useState('');
+    const dispatch = useDispatch();
 
     const handleAdd = () => {
-       if (text.trim()) {
-           dispatch(addTodo(text))
-           setText('')
-       }
-    }
+        if (text.trim()) {
+            dispatch(addTodo(text));
+            setText('');
+        }
+    };
 
     return (
         <div className='add-item'>
-            <input
-                type="text"
-                className='add-item__input'
+            <Input
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder='Добавьте новую задачу'
                 aria-label='Добавить новую задачу'
+                style={{ marginRight: '8px' }}
             />
-            <button
+            <Button
                 onClick={handleAdd}
-                className='add-item__button'
+                type="primary"
                 aria-label='Добавить задачу'
             >
                 Добавить
-            </button>
+            </Button>
         </div>
-    )
+    );
 };
 
 export default AddItem;
